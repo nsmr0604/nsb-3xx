@@ -1,0 +1,180 @@
+/C=DE/ST=Berlin/L=Berlin/O=Netfilter Project/OU=Development/CN=gandalf/emailAddress=gandalf@netfilter.org (2):
+      Make sure we set l3protonum in the tuples.
+      Fix endianess of tcp ports in the tuple.
+
+/C=DE/ST=Berlin/L=Berlin/O=Netfilter Project/OU=Development/CN=kaber/emailAddress=kaber@netfilter.org (6):
+      Use u_int8_t for CTA_PROTO_NUM
+      : Userspace code related to fixed timeout patch (Eric Leblond <eric@inl.fr>)
+      libnetfilter_conntrack pkt-config modifications (KOVACS Krisztian <hidden@balabit.hu>)
+      Remove check for UID == 0, it is wrong for multiple reasons. (Sebastian Hagen <sebastian_hagen@memespace.net>)
+      [patch] libnetlink_conntrack compile fix (Thomas Jarosch <thomas.jarosch@intra2net.com>)
+      Fix icmp_id setter and doc (Phil Dibowitz <phil@ipom.com>)
+
+/C=DE/ST=Berlin/L=Berlin/O=Netfilter Project/OU=Development/CN=laforge/emailAddress=laforge@netfilter.org (37):
+      restructuring libctnetlink -> libnfnetlink_conntrack
+      fix up include path names
+      add gpl
+      This patch includes the following updates for the userspace
+      fix include paths, use correct automake version, add missing Makefile.am
+      - make ctnl_test compile again (but it still needs to be ported)
+      include ip_conntrack.h for status bit enum
+      0.0.10
+      we only need automake 1.6
+      - Add missing files: include/libnfnetlink_conntrack/Makefile.am and include/Makefile.am.
+      add extra 'data' argument to callback functions
+      add nfct_fd() function
+      destination ipv6 address is also 128bits, not 64.
+      we have to link against libnfnetlink, otherwise the dependency is missing
+      - move plugins to their own subdirectory
+      remove bogus acinclude.m4 stuff
+      - modules don't need a 'lib' prefix
+      introduce library API versioning and plugin release handling
+      don't use kernel headers installed on system, but include our own linux_nnfnetlink_conntrack.h
+      bump version to 0.0.27
+      This patch add the ability to copy and mangle the kernel headers
+      - get rid of KERNELDIR include
+      add global Makefile
+      add Make_global.am to EXTRA_DIST
+      some old libc's don't define IPPROTO_SCTP
+      we need to use AM_CFLAGS to prevent overriding of user-specified CFLAGS
+      add KERNEL_DIR option to autogen.sh for all new libraries (Krzysztof Oledzki)
+      add 'debian' subdirectory for building debian packages
+      make 'rules' executable, remove 'tarball' from cdbs
+      we have to include l3extensions.h in dist
+      don't miss the plugins while installing
+      Introduce various API changes throughout the library stack
+      make sure configure fails if libnfnetlink is too old (< 0.0.16)
+      add version info
+      export a function required by nfct helper support
+      pkg-config enable all netfilter libraries
+      only copy include file from kernel directory if 'autogen.sh' is run with 'distrib' argument
+
+/C=DE/ST=Berlin/L=Berlin/O=Netfilter Project/OU=Development/CN=pablo/emailAddress=pablo@netfilter.org (48):
+      Major changes, this library isn't libnfnetlink_conntrack anymore.
+      Fix the calculation of the mininum size of a message. This fix the deficit complain of nfnl_parse_attr.
+      Rename libnfnetlink_conntrack to libnetfilter_conntrack, for some
+      Commit libnetfilter_conntrack.h, I missed it :(
+      o Missing flags fro nfct_open()
+      Some API changes, still some slighty modification are about to come before
+      o Bumped version to 0.1.3
+      o Fix wrong list initialization of proto_list
+      o Add conntrack event notification test
+      o Fix autogen.sh. Thanks to Eric Leblond <eleblond@inl.fr>
+      o new nfct_handler prototype
+      o Renamed nfct_[set|unset]_callback to nfct_[register|unregister]_callback
+      Fix alignment issues
+      Thanks to Harald for all the comments.
+      o make static protocol handler functions
+      o Added the expectation printing API
+      Special thanks to Deti Fiegl from the Leibniz Supercomputing Centre in Munich, Germany for providing the "fast" hardware to reproduce spurious bugs ;)
+      o Bumped version to 0.2.4
+      o ctnl_test now uses NFCT_ALL_CT_GROUPS
+      o Display similar ICMP output as cat /proc/net/ip_conntrack
+      o Kill non-portable NIPQUAD, use inet_ntoa instead.
+      Remove last blank space returned by nfct_sprintf_expect_id
+      Add another missing bit concerned with the blank space in nfct_sprintf_expect_id
+      o move nfct_handler to libnetfilter_conntrack.c, better for encapsulation
+      sed 's/nfct_proto_.so/libnfct_proto_.so/g'
+      o nfct_build_conntrack is too much, the only clients are new_conntrack and
+      o Fixed bugs in UDP and SCTP protocol handlers (parse_proto)
+      Add l3protonum field to nfct_tuple: ensure backward compatibility once
+      Slightly API changes required for the upcoming ipv6 support
+      Add support for per-family table flushing. ie. flush just AF_INET entries. Towards ipv6 support.
+      Yasuyuki confirmed that l3protonum must be u_int8_t instead of u_int16t.
+      o add IPv6 support
+      o Add missing layer-3 protocol flags for the expectation tuple
+      flush stdout, so realtime output to a pipe is broken (Daniel De Graaf)
+      Simplification: nfnl_send + nfnl_listen calls for nfnl_talk
+      Fix expectation mask dumping
+      Introduce the new libnetfilter_conntrack API, features:
+      - replace ntohs by htons in the example file (reported by Victor Stinner)
+      Fix minor nitpick in the XML output (Victor Stinner)
+      Minor fix in the counter parsing: replace htonl by ntonl, anyway they are actually the same function so this should not break anything.
+      - fix a crash on trying to set the counters of a conntrack
+      use: [ "x$1" = "xdistrib" ] instead of [ "x$1" == "xdistrib" ] in autogen.sh (spotted by Victor Stinner)
+      fix wrong documentation in nfct_attr_get_u[*] functions
+      - fix inconsistency in the behaviour of nfct_set_attr with ATTR_STATUS: now status flags bits of conntrack objects in userspace can be set and unset as it happens with other attributes.
+      Set status bit if whatever status flags are available, not only for ASSURED and SEEN_REPLY
+      bump version to 0.0.55
+      libnetfilter_conntrack requires libnfnetlink >= 0.0.25
+      add extern C's to public headers (Phil Dibowitz)
+
+/C=EU/ST=EU/CN=Pablo Neira Ayuso/emailAddress=pablo@netfilter.org (52):
+      Remove debian/ dir from releases.
+      - fix compilation warning in snprintf.c
+      introduce the new expectation API
+      Move old deprecated libnetfilter_conntrack API definitions at the bottom of libnetfilter_conntrack.h. The old API will be removed after quite some time.
+      update credits
+      - add warning note to ctnl_test.c: old API is deprecated
+      - split new_api_test.c into several conntrack_*.c files to learn much easier how the new API works
+      - delete ctnl_test.c since it contains examples of the old *deprecated* API
+      - do not install example files, just compile them
+      add README file
+      add support for 64 bits counters (Krzysztof Oledzki)
+      fix invalid argument error: status flags may not be present in update messages
+      fix silly bug in nfct_getobjopt(..., NFCT_GOPT_IS_*NAT), always return 1 if status flags are set
+      introduce NFCT_SOPT_SETUP_* options to simplify object setup
+      fix nfct_snprintf behaviour if the buffer passed is too small (similar to C99 convention)
+      nfct_snprintf now returns the number of bytes that would have been written, not just the number of bytes written. Emulate snprintf behaviour as in specified in C99
+      nfexp_snprintf behaves as snprintf C99
+      Introduce NFCT_Q_CREATE_UPDATE: create conntrack, if it exists, update it
+      bump version to 0.0.80
+      fix type in snprintf_default.c (Jozsef Kladecsik)
+      - introduce nfct_nfnlh() to use functions like nfnl_rcvbufsiz(): return read-only nfnl_handle
+      add layer 4 protocol comparison to nfct_compare()
+      The getters have to point to the right sized types, otherwise they don't work on big-endian. Philip Craig <philipc@snapgear.com>
+      add support for TCP flags
+      deprecated old libnetfilter_conntrack API
+      Add support for conntrack master setup
+      - move old API implementation to deprecated.c
+      add examples on how to add a new related conntrack
+      fix several compilation warnings (reported by J.Engelhardt)
+      - add missing getter for TCP flags/mask
+      - add support for secmark
+      add support for udplite
+      add conditional IPPROTO_UDPLITE declaration
+      remove read-only variable from example file
+      add secmark getter and setters
+      add NFCT_OF_TIME output flag to nfct_snprintf
+      several cleanups for Makefile.am
+      Several tree reorganizations:
+      add deprecated/Makefile.am
+      add support for NAT sequence adjusment
+      - fix broken 'deprecated backward compatibility'
+      This rather trivial patch adds ICMPv6 support for libnetfilter_conntrack,
+      This patch adds invmap support and duplicate code/id for reply direction,
+      fix segfault while getting the conntrack ID (reported by Thomas Mader)
+      add nfct_send
+      - add nfct_cmp (replacement for nfct_compare a bit more flexible)
+      fix missing bitset in the autocomplete code
+      check for pkg-config before anything (fix bogus missing libnfnetlink failure)
+      - bump version to 0.0.92
+      Add missing master tuple getters (reported by Max Wilhelm)
+      improve nfct_copy
+      compare layer 3 and layer 4 protocol number before addresses
+
+Albert Veli (1):
+      API: fix endianess issue
+
+Fabian Hugelshofer (1):
+      Use union of char buffer and message header to ensure proper byte
+
+Pablo Neira Ayuso (17):
+      fix __nfct_l4 structure layout (specifically, ICMP)
+      fix nfct_copy with NFCT_CP_ORIG and NFCT_CP_REPLY flags
+      add full support of SCTP
+      define ICMPV6_NI_QUERY and ICMPV6_NI_REPLY if not set
+      fix bug in nfct_cmp() with IPv6 address
+      fix wrong ATTR_*_L3PROTO handling in the message building
+      bump version to 0.0.95
+      remove slip through change in conntrack_event.c
+      conditional compilation of testsuite utils
+      bump version to 0.0.96
+      add comment in expect_create test file
+      add berkeley socket filtering high-level API
+      Extend high-level API for netlink BSF to add negative logic
+      bsf: use ntohl instead of htonl in the example
+      cleanup: split internal.h into several internal header files
+      compare: add two new flags for different level of comparisons
+      helper: explicit helper assignation support
+

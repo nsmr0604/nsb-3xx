@@ -1,0 +1,14 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: Samba libsmbsharemodes
+Description: A library
+Version: 0
+URL: http://www.samba.org/
+#Libs: -L/usr/lib -lsmbsharemodes
+Libs: -lsmbsharemodes
+Libs.private: -lsmbsharemodes -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -Wl,--enable-new-dtags -Wl,-rpath -Wl,/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/lib -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -Wl,--enable-new-dtags -Wl,-rpath -Wl,/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/lib -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lldap -llber  -lresolv -ldl -liconv -lpthread
+Cflags: -I/usr/include
+

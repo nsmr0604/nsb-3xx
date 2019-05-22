@@ -1,0 +1,120 @@
+#!/usr/bin/python
+
+# run from rc.local by the testing VMs
+import sys, os, commands, glob, shutil
+
+# use the known MAC address to figure out who we are
+# we use the eth0 table from baseconfigs/net*sh
+macs = {}
+macs['nic'] = "12:00:00:de:ad:ba"
+macs['beet'] = "12:00:00:de:76:ba"
+macs['carrot'] = "12:00:00:de:76:bb"
+macs['east'] = "12:00:00:dc:bc:ff"
+macs['west'] = "12:00:00:ab:cd:ff"
+macs['north'] = "12:00:00:de:cd:49"
+macs['pole'] = "12:00:00:de:cd:01"
+macs['road'] = "12:00:00:ab:cd:02"
+macs['sunrise'] = "12:00:00:dc:bc:01"
+macs['sunset'] = "12:00:00:ab:cd:01"
+#conflicts with north
+#macs['japan'] = "12:00:00:ab:cd:02"
+
+if os.path.isfile("/etc/redhat-release"):
+	GUESTOS="redhat"
+elif os.path.isfile("/etc/debian_version"):
+	GUESTOS="debian"
+
+output = ""
+
+eth0 = "\n" + commands.getoutput("ip link show eth0")
+for hostname in macs.keys():
+	mac =  macs[hostname]
+	if mac in eth0:
+		# print "we are %s"%hostname
+		# we seem to have found our identity
+
+		# install files common to all GUESTOS types
+		output += "\n" + commands.getoutput("hostname %s"%hostname)
+		# fixup /etc/sysctl.conf 
+		sysctl = "/testing/baseconfigs/%s/etc/sysctl.conf"%hostname
+		if not os.path.isfile(sysctl):
+			sysctl = "/testing/baseconfigs/all/etc/sysctl.conf"
+		shutil.copyfile(sysctl,"/etc/sysctl.conf")
+		output += "\n" + commands.getoutput("sysctl -q -p")
+
+		# and resolv.conf
+		resolv = "/testing/baseconfigs/%s/etc/resolv.conf"
+		if not os.path.isfile(resolv):
+			resolv = "/testing/baseconfigs/%s/etc/resolv.conf"%hostname
+		shutil.copyfile(resolv,"/etc/resolv.conf")
+
+		if not os.path.isdir("/etc/ssh"):
+			os.makedirs("/etc/ssh",0755)
+		if not os.path.isdir("/root/.ssh"):
+			os.makedirs("/root/.ssh",0700)
+		output += "\n" + commands.getoutput("cp /testing/baseconfigs/all/etc/ssh/*key* /etc/ssh/")
+		output += "\n" + commands.getoutput("cp /testing/baseconfigs/all/root/.ssh/* /root/.ssh/")
+		output += "\n" + commands.getoutput("chmod 600 /etc/ssh/*key* /root/.ssh/*")
+
+		if GUESTOS == "redhat":
+			shutil.copyfile("/testing/baseconfigs/%s/etc/sysconfig/network"%hostname, "/etc/sysconfig/network")
+			fnames = glob.glob("/testing/baseconfigs/all/etc/sysconfig/*")
+			for fname in fnames:
+				if os.path.isfile(fname):
+					shutil.copy(fname,"/etc/sysconfig")
+	
+			ifaces = glob.glob("/testing/baseconfigs/%s/etc/sysconfig/network-scripts/ifcfg*"%hostname)
+			routes = glob.glob("/testing/baseconfigs/%s/etc/sysconfig/network-scripts/route*"%hostname)
+			for entry in (ifaces + routes):
+				shutil.copyfile(entry,"/etc/sysconfig/network-scripts/%s"%os.path.basename(entry))
+
+			# SElinux fixup
+			output += "\n" + commands.getoutput("restorecon -R /etc/ /root/.ssh")
+			output += "\n" + commands.getoutput("chcon -R --reference /var/log /testing/pluto")
+
+			# we have to cleanup the audit log or we could get entries from before this boot
+			fp = open("/var/log/audit.log","w")
+			fp.close()
+
+			if os.path.isfile("/usr/bin/systemctl"):
+				for service in ( "network", "iptables", "ip6tables"):
+					output += "\n" + commands.getoutput("systemctl restart %s.service"%service)
+			else:
+				for service in ( "network", "iptables", "ip6tables"):
+					output += "\n" + commands.getoutput("service %s restart"%service)
+			# get rid of damn cp/mv/rm aliases for root
+			if not "#alias" in open("/root/.bashrc","r").read():
+				output += "\n" + commands.getoutput("sed -i 's/alias/# alias/g' /root/.bashrc")
+
+
+		elif GUESTOS == "debian":
+			shutil.copyfile("/testing/baseconfigs/%s/etc/hostname"%hostname,"/etc/hostname")
+			shutil.copyfile("/testing/baseconfigs/%s/etc/network/interfaces"%hostname, "/etc/network/interfaces")
+			output += "\n" + commands.getoutput("/etc/init.d/networking restart")
+
+		# and some custom ipsec* files, but not directories
+		if os.path.isdir("/etc/ipsec.d"):
+			if not os.path.isdir("/etc/ipsec.d.stock"):
+				os.rename("/etc/ipsec.d", "/etc/ipsec.d.stock")
+			else:
+				shutil.rmtree("/etc/ipsec.d")
+		shutil.copytree("/testing/baseconfigs/all/etc/ipsec.d","/etc/ipsec.d",ignore=shutil.ignore_patterns("ipsec.conf.common"))
+		# copytree is not ideal to add to existing dir
+		output += "\n" + commands.getoutput("cp -a /testing/baseconfigs/%s/etc/ipsec.* /etc/"%hostname)
+
+		# fixup the nss files that are root-only on a real host, but are world-read
+		# in our repository so the qemu user can still read it to copy it
+		if os.path.isfile("/etc/ipsec.d/pkcs11.txt"):
+			os.chmod("/etc/ipsec.d/pkcs11.txt",0600)
+		for dbfile in glob.glob("/etc/ipsec.d/*.db"):
+			os.chmod(dbfile,0600)
+
+		# SElinux fixup
+		if GUESTOS == "redhat":
+			output += "\n" + commands.getoutput("restorecon -R /etc/")
+
+		if len(sys.argv) > 1:
+			print output.strip()
+		sys.exit()
+
+sys.exit("ERROR: Failed to find our swan hostname based on the mac of eth0")

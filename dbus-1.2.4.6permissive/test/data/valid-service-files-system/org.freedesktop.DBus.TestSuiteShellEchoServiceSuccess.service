@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=org.freedesktop.DBus.TestSuiteShellEchoServiceSuccess
+Exec=/home/igarashi/cortina/build_dir/target-arm_uClibc-0.9.32_eabi/dbus-1.2.4.6permissive/test/test-shell-service -test "that" 'we get' back --what "we put in"
+User=anyrandomuser
+

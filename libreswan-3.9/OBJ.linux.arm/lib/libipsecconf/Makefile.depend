@@ -1,0 +1,113 @@
+confread.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/confread.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/lswalloc.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include/nspr/prcpucfg.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/files.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/confread.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/keywords.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/starterlog.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/oeconns.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/interfaces.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ parser.tab.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser-controls.h
+confwrite.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/confwrite.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/confread.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/keywords.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include/nspr/prcpucfg.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/confwrite.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/keywords.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser.h \
+ parser.tab.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser-controls.h
+interfaces.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/interfaces.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/ports/linux/include/sysdep.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/sysqueue.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/types.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/posix_types.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/stddef.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/compiler.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/socketwrapper.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan/ipsec_tunnel.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/interfaces.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/exec.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/files.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/starterlog.h
+keywords.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/keywords.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include/nspr/prcpucfg.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/keywords.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser.h \
+ parser.tab.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser-controls.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parserlast.h
+oeconns.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/oeconns.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/confread.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/keywords.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include/nspr/prcpucfg.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/interfaces.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/starterlog.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/oeconns.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser.h \
+ parser.tab.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/parser-controls.h
+starterlog.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/starterlog.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include/nspr/prcpucfg.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/starterlog.h
+starterwhack.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libipsecconf/starterwhack.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/ports/linux/include/sysdep.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/sysqueue.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/types.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/posix_types.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/stddef.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/linux-3.4/include/linux/compiler.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/starterwhack.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/confread.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/keywords.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include/nspr/prcpucfg.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/files.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ipsecconf/starterlog.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/socketwrapper.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/lswalloc.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/lswlog.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan/passert.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/whack.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/id.h

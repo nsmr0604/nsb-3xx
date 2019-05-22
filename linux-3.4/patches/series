@@ -1,0 +1,4 @@
+platform-cs-unified/1000-linux-3.4.86.patch
+platform-cs-unified/2000-cortina-3.4.patch
+platform-cs-unified/4000-cs-unified-3.4.86-openwrt.patch
+platform-cs-unified/5001-add-kernel-support-for-512MB-flash.patch

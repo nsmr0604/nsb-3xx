@@ -1,0 +1,1 @@
+/home/igarashi/cortina/staging_dir/host/share/aclocal/lt~obsolete.m4

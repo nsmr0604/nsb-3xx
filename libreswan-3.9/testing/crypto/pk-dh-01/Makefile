@@ -1,0 +1,22 @@
+LIBRESWANSRCDIR?=$(shell cd ../../..; pwd)
+
+UNITTEST=pk-dh
+CFLAGS+=-DUSE_3DES -I${LIBRESWANSRCDIR}/programs/pluto
+
+SOURCES=pk-dh.c ${LIBRESWANSRCDIR}/programs/pluto/hmac.c
+SOURCES+=${LIBRESWANSRCDIR}/programs/pluto/crypto.c
+SOURCES+=${LIBRESWANSRCDIR}/programs/pluto/ike_alg.c
+SOURCES+=${LIBRESWANSRCDIR}/programs/pluto/crypt_utils.c
+SOURCES+=${LIBRESWANSRCDIR}/programs/pluto/crypt_dh.c
+SOURCES+=${LIBRESWANSRCDIR}/programs/pluto/ikev2_prfplus.c
+
+PROGRAM=pk-dh
+
+pk-dh: ${SOURCES}
+
+programs checkprograms: ${UNITTEST}
+	@true
+
+include ${LIBRESWANSRCDIR}/programs/Makefile.program
+
+

@@ -1,0 +1,21 @@
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+
+SET(sources
+	pppoe.c
+	mac_filter.c
+	dpado.c
+	cli.c
+)
+
+IF (RADIUS)
+SET(sources ${sources} tr101.c)
+ENDIF(RADIUS)
+
+ADD_LIBRARY(pppoe SHARED ${sources})
+TARGET_LINK_LIBRARIES(pppoe ${crypto_lib})
+#set_property(TARGET pppoe PROPERTY CMAKE_SKIP_BUILD_RPATH FALSE)
+#set_property(TARGET pppoe PROPERTY CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+#set_property(TARGET pppoe PROPERTY INSTALL_RPATH_USE_LINK_PATH FALSE)
+#set_property(TARGET pppoe PROPERTY INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib/accel-ppp)
+
+INSTALL(TARGETS pppoe LIBRARY DESTINATION lib/accel-ppp)

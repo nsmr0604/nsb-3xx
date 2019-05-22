@@ -1,0 +1,2 @@
+SUBDIRS = .
+ACLOCAL_AMFLAGS = -I macros

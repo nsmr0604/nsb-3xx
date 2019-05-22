@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+                   "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<!-- lifted from troff+man by doclifter -->
+<refentry>
+<refentryinfo>
+  <author><firstname>Henry</firstname><surname>Spencer</surname><authorblurb><para></para> </authorblurb></author>
+</refentryinfo>
+<refmeta>
+<refentrytitle>IPSEC</refentrytitle>
+<manvolnum>8</manvolnum>
+<refmiscinfo class='date'>17 March 2014</refmiscinfo>
+<refmiscinfo class="source">libreswan</refmiscinfo>
+<refmiscinfo class="manual">Executable programs</refmiscinfo>
+</refmeta>
+<refnamediv id='name'>
+<refname>ipsec</refname>
+<refpurpose>invoke IPsec utilities</refpurpose>
+</refnamediv>
+<!-- body begins here -->
+<refsynopsisdiv id='synopsis'>
+<cmdsynopsis>
+  <command>ipsec</command>    
+    <arg choice='plain'><replaceable>command</replaceable></arg>
+    <arg choice='opt' rep='repeat'><replaceable>argument</replaceable></arg>
+    <arg choice='plain'><replaceable>ipsec</replaceable></arg>
+    <arg choice='plain'>--help </arg>
+    <sbr/>
+    <arg choice='plain'><replaceable>ipsec</replaceable></arg>
+    <arg choice='plain'>--version </arg>
+    <sbr/>
+    <arg choice='plain'><replaceable>ipsec</replaceable></arg>
+    <arg choice='plain'>--directory </arg>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1 id='description'><title>DESCRIPTION</title>
+<para><emphasis remap='I'>ipsec</emphasis>
+invokes any of several utilities involved in controlling the IPsec
+encryption/authentication system,
+running the specified
+<emphasis remap='I'>command</emphasis>
+with the specified
+<emphasis remap='I'>argument</emphasis>s
+as if it had been invoked directly.
+This largely eliminates possible name collisions with other software,
+and also permits some centralized services.</para>
+
+<para><userinput>ipsec --help</userinput>
+lists the available commands.
+Most have their own manual pages, e.g.
+<citerefentry><refentrytitle>ipsec_auto</refentrytitle><manvolnum>8</manvolnum></citerefentry>
+for
+<emphasis remap='I'>auto</emphasis>.</para>
+
+<para><userinput>ipsec --version</userinput>
+outputs the software version.
+A version code of the form ``U<emphasis remap='I'>xxx</emphasis>/K<emphasis remap='I'>yyy</emphasis>''
+indicates that the user-level utilities are version <emphasis remap='I'>xxx</emphasis>
+but the kernel portion appears to be version <emphasis remap='I'>yyy</emphasis>
+(this form is used only if the two disagree). For the NETKEY/XFRM stack, the kernel version is used, always displaying the U/K split.</para>
+
+<para><userinput>ipsec --directory</userinput>
+reports where
+<command>ipsec</command>
+thinks the IPsec commands are stored.</para>
+
+</refsect1>
+
+<refsect1 id='commands'><title>COMMANDS</title>
+<para>To get a list of supported commands, use ipsec --help. A few of the
+commonly used commands are described below</para>
+
+<para><userinput>ipsec setup start|stop|restart</userinput> maps to the
+host init system. Supported init systems are sysv, systemd, upstart and openrc.
+</para>
+
+<para><userinput>ipsec barf</userinput> dumps the internal system status
+to stdout for debugging</para>
+
+<para><userinput>ipsec auto </userinput> is used to manually add, remove, up or down connections. For more information see 'man ipsec_auto </para>
+
+<para><userinput>ipsec whack</userinput> is used to communicate direct commands to the pluto daemon using the whack interface. For more information see 'man ipsec_pluto' </para>
+
+<para><userinput>ipsec initnss</userinput> initialises the NSS database that contains all the X.509 certificate information and private RSA keys</para>
+
+<para><userinput>ipsec import</userinput> is used to import PKCS#12 X.509 files into the NSS database</para>
+
+
+</refsect1>
+
+<refsect1 id='files'><title>FILES</title>
+<para>/usr/local/libexec/ipsec	usual utilities directory</para>
+</refsect1>
+
+<refsect1 id='see_also'><title>SEE ALSO</title>
+<para>ipsec.<citerefentry><refentrytitle>conf</refentrytitle><manvolnum>5</manvolnum></citerefentry>, ipsec.<citerefentry><refentrytitle>secrets</refentrytitle><manvolnum>5</manvolnum></citerefentry>,
+<citerefentry><refentrytitle>ipsec_auto</refentrytitle><manvolnum>8</manvolnum></citerefentry>,
+<citerefentry><refentrytitle>ipsec_setup</refentrytitle><manvolnum>8</manvolnum></citerefentry>,
+<citerefentry><refentrytitle>ipsec_showhostkey</refentrytitle><manvolnum>8</manvolnum></citerefentry></para>
+
+</refsect1>
+
+</refentry>
+

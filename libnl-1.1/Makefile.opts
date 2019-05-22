@@ -1,0 +1,39 @@
+#
+# Makefile.opts.in
+#
+# 	This library is free software; you can redistribute it and/or
+#	modify it under the terms of the GNU Lesser General Public
+#	License as published by the Free Software Foundation version 2.1
+#	of the License.
+#
+# Copyright (c) 2003-2006 Thomas Graf <tgraf@suug.ch>
+#
+
+CC               := arm-openwrt-linux-uclibcgnueabi-gcc
+CFLAGS           := -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -ffunction-sections -fpic 
+LDFLAGS          := -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/lib -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/usr/lib -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib 
+CPPFLAGS         := -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/include -I/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/include 
+PACKAGE_NAME     := libnl
+PACKAGE_VERSION  := 1.1
+
+LIBNL_LIB        := -lm
+
+prefix           := /usr
+exec_prefix      := /usr
+libdir           := ${exec_prefix}/lib
+includedir       := ${prefix}/include
+mandir           := /usr/man
+sysconfdir       := /etc
+
+AR               := ar
+RM               := rm
+LN               := ln
+
+DEPFLAGS         += -M -I../include/ -I. $(CPPFLAGS)
+CFLAGS           += -g -I./include -I../include -I. $(CPPFLAGS) -D_GNU_SOURCE
+MAKEFLAGS        += --no-print-directory
+
+ifeq ($(CC),gcc)
+CFLAGS           += -Wall -ggdb
+endif
+

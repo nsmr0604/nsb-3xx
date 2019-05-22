@@ -1,0 +1,1 @@
+/home/igarashi/cortina/build_dir/target-arm_uClibc-0.9.32_eabi/perl/perl-5.10.0/ext/Encode/t/mime_header_iso2022jp.t

@@ -1,0 +1,16 @@
+This patch adds NIST CMAC to the CryptoAPI stack and also adds CMAC-96 to the IPsec stack.  It applies cleanly 
+against 3.7.0-rc6 and will apply against older kernels with the exception of one file:
+
+include/uapi/linux/pfkeyv2.h
+
+is found at:
+
+include/linux/pfkeyv2.h
+
+In Kernels prior to v3.7.0.
+
+You can apply it to a clean source tree with:
+
+patch -p 1 < 0001-Added-NIST-CMAC-to-the-CryptoAPI-library.patch
+
+

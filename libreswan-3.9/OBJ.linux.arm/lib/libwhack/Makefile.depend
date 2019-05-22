@@ -1,0 +1,26 @@
+aliascomp.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libwhack/aliascomp.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/ports/linux/include/sysdep.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/sysqueue.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/lswalloc.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/whack.h
+whacklib.o: \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/lib/libwhack/whacklib.c \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/ports/linux/include/sysdep.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/sysqueue.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/ietf_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/pluto_constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/names_constant.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/lswalloc.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/constants.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/lswlog.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/linux/include/libreswan/passert.h \
+ /home/igarashi/cortina/build_dir/linux-g2_wan/libreswan-3.9/include/whack.h

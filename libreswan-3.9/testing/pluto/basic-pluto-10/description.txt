@@ -1,0 +1,5 @@
+basic test with esp=null-md5
+
+Testcase for Mantis #428 "KLIPS NULL encryption patch (through cryptoapi)"
+
+(klips seems broken for null encryption via cryptoapi)

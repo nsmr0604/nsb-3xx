@@ -1,0 +1,32 @@
+This is mrd6, a ipv6 multicast routing daemon for Linux (and BSD).
+
+It supports MLDv2 (and MLDv1 compatibility), PIM-SM (including SSM
+support, BSR and Embedded-RP), partial MBGP support (IPv6 multicast
+SAFI to populate the local mrib, when used in an edge), native and
+virtual interfaces (ipv6-ipv4, ipv6-ipv6 and tun/tap tunnels have
+all been tested extensively) as well as remote configuration (via CLI).
+Automatic translation of IPv4 multicast traffic to IPv6 is also
+supported (contributed by Teemu Kiviniemi).
+
+You may use mrd6 with any Linux 2.6 based system as no kernel support
+for ipv6 multicast forwarding is required, that feature is implemented
+by mrd6 itself.
+
+Build requirements: a GNU build system, including G++ and Make.
+
+To build the default configuration, just run 'make', a 'mrd6' binary
+will be compiled in src/. You can then install it (including
+default configuration files and man pages) into your system using
+'make install'.
+
+For a custom build, run 'make config', where support for individual
+features may be enabled or disabled.
+
+For more information refer to http://fivebits.net/proj/mrd6/
+
+mrd6 started being developed in 2004 and thus it's showing it's age.
+However it is still a useful tool in certain scenarios, including
+quick network prototyping, testing new network features and even to
+run in embedded systems.
+
+- Hugo Santos <hugo@fivebits.net>

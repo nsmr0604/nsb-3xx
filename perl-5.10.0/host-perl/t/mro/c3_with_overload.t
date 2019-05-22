@@ -1,0 +1,1 @@
+/home/igarashi/cortina/build_dir/target-arm_uClibc-0.9.32_eabi/perl/perl-5.10.0/t/mro/c3_with_overload.t

@@ -1,0 +1,66 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2010 OpenWrt.org
+
+. /etc/functions.sh
+
+START=99
+
+davfs2_setup() {
+	local enabled
+	local server_ip 
+	local server_port 
+	local mount_point 
+
+  	config_get server_ip $1 server_ip 
+        config_get server_port $1 server_port 
+        config_get mount_point $1 mount_point 
+        config_get enabled $1 enabled
+
+	if [ "$enabled" -eq 1 ]; then
+                  
+            echo "Start davfs2"
+
+	    grep -q -e davfs2 /etc/passwd
+            if [ $? != 0 ]; then
+                adduser davfs2 < /etc/config/enter2
+            fi
+
+	    if [ ! -d /var/cache/davfs2 ]; then
+		mkdir -p /var/cache/davfs2
+		chmod 777 -R /var/cache		
+	    fi			
+	    if [ ! -d $mount_point ]; then
+		mkdir -p $mount_point
+	    fi		
+
+	    if [ -e /etc/davfs2/secrets ]; then
+                chmod 600 /etc/davfs2/secrets
+            fi
+
+	    ##debug_Aaron on 2012/03/26 can not mount when bring up by Luci reported from QA
+	    ##mount -t davfs $server_ip:$server_port $mount_point	< /etc/config/enter2
+	    mount.davfs $server_ip:$server_port $mount_point	< /etc/config/enter2
+
+	    grep -q -e ^use_locks /etc/davfs2/davfs2.conf 	 	
+	    if [ $? != 0 ]; then
+	    	sed -i '/use_locks/ause_locks 0' /etc/davfs2/davfs2.conf	
+	    fi	
+	fi
+}
+
+davfs2_release() {
+        local mount_point
+
+        config_get mount_point $1 mount_point
+	umount $mount_point	
+}
+
+start() {
+	config_load  davfs2 
+	config_foreach davfs2_setup davfs2 
+}
+
+stop() {
+        config_load davfs2 
+        config_foreach davfs2_release davfs2 
+}

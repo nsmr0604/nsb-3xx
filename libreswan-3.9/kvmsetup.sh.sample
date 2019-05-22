@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# This is the configuration file that helps setup for
+# a kernel pool for KVM compilation w/FreeSWAN.
+#
+# Copy this file to the top of your FreeSWAN source directory as
+# kvmsetup.sh, edit that copy, and populate the paths.
+
+
+# space for everything:
+# Just a shorthand for the following definitions.
+# Can be eliminated if available space is fragmented.
+KVMPREFIX=/home/build/
+
+LIBRESAWNBASE=/home/build/libreswan/
+
+REGRESSRESULTS=$KVMPREFIX/results
+
+# set this to someplace with at least 100Mb free.
+POOLSPACE=$KVMPREFIX/pool
+
+# Fedora media
+OSTYPE=fedora
+# Note: Replace this with your local Fedora tree if you have one.
+OSMEDIA=http://fedora.mirror.nexicom.net/linux/releases/20/Fedora/x86_64/os/
+
+# Ubuntu media
+# OSTYPE=ubuntu
+# OSMEDIA=http://ftp.ubuntu.com/ubuntu/dists/precise/main/installer-amd64/
+
+# Everything below should probably be left unchanged
+
+# note that "nic" and "sec" are the same host in different configurations
+REGULARHOSTS='nic'
+LIBRESWANHOSTS='east west road north'
+
+# tell system location of special tcpdump, if any
+export TCPDUMP="/usr/sbin/tcpdump"
+if [ ! -f $TCPDUMP ]
+then
+	echo "WARNING: tcpdump is not installed or invalid TCPDUMP= "
+fi
+
+# we always use OBJ directories for KVM builds.
+USE_OBJDIR=true export USE_OBJDIR
+

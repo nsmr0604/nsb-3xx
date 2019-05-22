@@ -1,0 +1,8 @@
+#define X264_BIT_DEPTH     8
+#define X264_GPL           1
+#define X264_INTERLACED    1
+#define X264_CHROMA_FORMAT 0
+#define X264_REV 1896
+#define X264_REV_DIFF 2593
+#define X264_VERSION " r1896+2593M b371cb8"
+#define X264_POINTVER "0.129.1896+2593M b371cb8"

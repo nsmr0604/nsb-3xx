@@ -1,0 +1,21 @@
+The following people have contributed major resources, significant
+patches or monetary donations to The Libreswan Project.
+
+Avesh Agarwal <avagarwa@redhat.com>
+Antony Antony <antony@phenome.org>
+Wes Hardaker <opensource@hardakers.net>
+Kim B. Heino <b@bbbs.net>
+David McCullough <david_mccullough@mcafee.com>
+Hugh Redelmeier <hugh@mimosa.com>
+Tuomo Soini <tis@foobar.fi>
+Philippe Vouters <Philippe.Vouters@laposte.net>
+Paul Wouters <pwouters@redhat.com>
+
+
+Libreswan is a fork of the Openswan 2.6.38 codebase.
+Please see the docs/CREDITS.openswan file from Openswan for details on
+original work.
+
+Openswan is a fork of the FreeS/WAN 2.04 codebase.
+Please see the doc/CREDITS.freeswan file from FreeS/WAN for details on
+original work.

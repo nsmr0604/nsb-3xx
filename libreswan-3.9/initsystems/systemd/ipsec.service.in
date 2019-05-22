@@ -1,0 +1,27 @@
+[Unit]
+Description=Internet Key Exchange (IKE) Protocol Daemon for IPsec
+After=network.target
+#After=remote-fs.target
+
+[Service]
+Type=simple
+Restart=always
+# backwards compatible with plutorestartoncrash=no
+#RestartPreventExitStatus=137 143 SIGTERM SIGKILL
+EnvironmentFile=-@FINALSYSCONFDIR@/sysconfig/pluto
+#Environment=IPSEC_SBINDIR=@FINALSBINDIR@
+#Environment=IPSEC_EXECDIR=@FINALLIBEXECDIR@/ipsec
+#PIDFile=@FINALVARDIR@/run/pluto/pluto.pid
+#
+ExecStartPre=@FINALLIBEXECDIR@/addconn --config @FINALCONFFILE@ --checkconfig
+ExecStartPre=@FINALLIBEXECDIR@/_stackmanager start
+ExecStart=@BINSH@ -c 'eval `@FINALLIBEXECDIR@/pluto --config @FINALCONFFILE@ --nofork $PLUTO_OPTIONS`'
+ExecStop=@FINALLIBEXECDIR@/whack --shutdown
+ExecStopPost=/sbin/ip xfrm policy flush
+ExecStopPost=/sbin/ip xfrm state flush
+ExecReload=@FINALLIBEXECDIR@/whack --listen
+
+[Install]
+WantedBy=multi-user.target
+Alias=libreswan.service
+Alias=pluto.service

@@ -1,0 +1,139 @@
+The target system is: Linux - 1 - arm
+The host system is: Linux - 2.6.38-16-generic - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc 
+Build flags: -O;-pipe;-march=armv7-a;-mtune=cortex-a9;-funit-at-a-time;-mfpu=neon;-ftree-vectorize;-mfloat-abi=softfp;-fhonour-copts;-I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include;-I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include;;
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+make[5]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[6]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_progress_report /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o
+/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include        -o CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o   -c /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec
+/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include        CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o  -o cmTryCompileExec -rdynamic 
+make[6]: Leaving directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+make[5]: Leaving directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+make[5]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[6]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_progress_report /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o
+/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include        -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /home/igarashi/cortina/staging_dir/host/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec
+/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include       -v CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc
+COLLECT_LTO_WRAPPER=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/lto-wrapper
+Target: arm-openwrt-linux-uclibcgnueabi
+Configured with: /home/igarashi/cortina/build_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/gcc-linaro-4.5-2010.12-0/configure --prefix=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi --build=i686-linux-gnu --host=i686-linux-gnu --target=arm-openwrt-linux-uclibcgnueabi --with-gnu-ld --enable-target-optspace --disable-libgomp --disable-libmudflap --disable-multilib --disable-nls --with-gmp=/home/igarashi/cortina/staging_dir/host --with-mpfr=/home/igarashi/cortina/staging_dir/host --disable-decimal-float --with-gmp=/home/igarashi/cortina/staging_dir/host --with-mpc=/home/igarashi/cortina/staging_dir/host --with-mpfr=/home/igarashi/cortina/staging_dir/host --disable-decimal-float --disable-libssp --disable-__cxa_atexit --enable-languages=c,c++ --enable-shared --enable-threads --with-slibdir=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib --enable-lto --with-libelf=/home/igarashi/cortina/staging_dir/host --enable-tls
+Thread model: posix
+gcc version 4.5.2 20101126 (Linaro) [release 4.5-2010.12-0] (GCC) 
+COMPILER_PATH=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/bin/
+LIBRARY_PATH=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/
+COLLECT_GCC_OPTIONS='-O' '-pipe' '-march=armv7-a' '-mtune=cortex-a9' '-funit-at-a-time' '-mfpu=neon' '-ftree-vectorize' '-mfloat-abi=softfp' '-fhonour-copts' '-I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include' '-I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include' '-v' '-o' 'cmTryCompileExec' '-rdynamic'
+ /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/collect2 --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-uClibc.so.0 -X -m armelf_linux_eabi -o cmTryCompileExec /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crt1.o /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crti.o /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/crtbegin.o -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2 -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/crtend.o /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crtn.o
+make[6]: Leaving directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+make[5]: Leaving directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-openwrt-linux-uclibcgnueabi-ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
+  ignore line: [make[5]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [make[6]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp']
+  ignore line: [/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_progress_report /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include        -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /home/igarashi/cortina/staging_dir/host/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec]
+  ignore line: [/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1]
+  ignore line: [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include       -v CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/lto-wrapper]
+  ignore line: [Target: arm-openwrt-linux-uclibcgnueabi]
+  ignore line: [Configured with: /home/igarashi/cortina/build_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/gcc-linaro-4.5-2010.12-0/configure --prefix=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi --build=i686-linux-gnu --host=i686-linux-gnu --target=arm-openwrt-linux-uclibcgnueabi --with-gnu-ld --enable-target-optspace --disable-libgomp --disable-libmudflap --disable-multilib --disable-nls --with-gmp=/home/igarashi/cortina/staging_dir/host --with-mpfr=/home/igarashi/cortina/staging_dir/host --disable-decimal-float --with-gmp=/home/igarashi/cortina/staging_dir/host --with-mpc=/home/igarashi/cortina/staging_dir/host --with-mpfr=/home/igarashi/cortina/staging_dir/host --disable-decimal-float --disable-libssp --disable-__cxa_atexit --enable-languages=c,c++ --enable-shared --enable-threads --with-slibdir=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib --enable-lto --with-libelf=/home/igarashi/cortina/staging_dir/host --enable-tls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.5.2 20101126 (Linaro) [release 4.5-2010.12-0] (GCC) ]
+  ignore line: [COMPILER_PATH=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/:/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-O' '-pipe' '-march=armv7-a' '-mtune=cortex-a9' '-funit-at-a-time' '-mfpu=neon' '-ftree-vectorize' '-mfloat-abi=softfp' '-fhonour-copts' '-I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include' '-I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include' '-v' '-o' 'cmTryCompileExec' '-rdynamic']
+  link line: [ /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/collect2 --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-uClibc.so.0 -X -m armelf_linux_eabi -o cmTryCompileExec /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crt1.o /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crti.o /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/crtbegin.o -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2 -L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/crtend.o /home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crtn.o]
+    arg [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/libexec/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-uClibc.so.0] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec] ==> ignore
+    arg [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crt1.o] ==> ignore
+    arg [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crti.o] ==> ignore
+    arg [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/crtbegin.o] ==> ignore
+    arg [-L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2] ==> dir [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2]
+    arg [-L/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib] ==> dir [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib]
+    arg [CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/crtend.o] ==> ignore
+    arg [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse dir [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2] ==> [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2]
+  collapse dir [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2/../../../../arm-openwrt-linux-uclibcgnueabi/lib] ==> [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/arm-openwrt-linux-uclibcgnueabi/lib]
+  implicit libs: [c]
+  implicit dirs: [/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/lib/gcc/arm-openwrt-linux-uclibcgnueabi/4.5.2;/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/arm-openwrt-linux-uclibcgnueabi/lib]
+
+
+Determining if the function timerfd_create exists passed with the following output:
+Change Dir: /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+make[5]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[6]: Entering directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_progress_report /home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckFunctionExists.c.o
+/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include    -Wall -fvisibility=hidden -fno-strict-aliasing -D_GNU_SOURCE -DPTHREAD_SPINLOCK -fPIC  -DCHECK_FUNCTION_EXISTS=timerfd_create   -o CMakeFiles/cmTryCompileExec.dir/CheckFunctionExists.c.o   -c /home/igarashi/cortina/staging_dir/host/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec
+/home/igarashi/cortina/staging_dir/host/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/igarashi/cortina/staging_dir/toolchain-arm_gcc-4.5.1+l_uClibc-0.9.32_eabi/bin/arm-openwrt-linux-uclibcgnueabi-gcc   -O -pipe -march=armv7-a -mtune=cortex-a9 -funit-at-a-time -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fhonour-copts -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr/include -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/opt/include    -Wall -fvisibility=hidden -fno-strict-aliasing -D_GNU_SOURCE -DPTHREAD_SPINLOCK -fPIC  -DCHECK_FUNCTION_EXISTS=timerfd_create   CMakeFiles/cmTryCompileExec.dir/CheckFunctionExists.c.o  -o cmTryCompileExec -rdynamic 
+make[6]: Leaving directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+make[5]: Leaving directory `/home/igarashi/cortina/build_dir/linux-g2_wan/accel-ppp-1.7.3/CMakeFiles/CMakeTmp'
+
+

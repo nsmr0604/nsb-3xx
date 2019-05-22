@@ -1,0 +1,10 @@
+# V1 setup defaults that differ from V2
+
+config setup
+	interfaces=%none
+	plutoload=%none
+	plutostart=%none
+	uniqueids=no
+
+# no rpfilter [like %unchanged]
+

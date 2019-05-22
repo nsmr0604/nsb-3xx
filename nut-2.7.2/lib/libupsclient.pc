@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+sysconfdir=/usr/etc
+statepath=/var/state/ups
+nutuser=nobody
+
+Name: libupsclient
+Description: UPS monitoring with Network UPS Tools
+Version: 2.7.2
+Libs: -L${libdir} -lupsclient -L/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//lib -lssl -lcrypto  
+Cflags: -I${includedir} -I/home/igarashi/cortina/staging_dir/target-arm_uClibc-0.9.32_eabi/usr//include  

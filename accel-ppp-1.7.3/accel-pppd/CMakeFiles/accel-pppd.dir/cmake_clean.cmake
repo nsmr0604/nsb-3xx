@@ -1,0 +1,41 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/accel-pppd.dir/ppp/ppp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_ifcfg.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_fsm.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_lcp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/lcp_opt_mru.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/lcp_opt_magic.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/lcp_opt_pcomp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/lcp_opt_accomp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_auth.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_ipcp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ipcp_opt_ipaddr.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ipcp_opt_dns.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ipcp_opt_wins.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ipv6cp_opt_intfid.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_ipv6cp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ppp_ccp.c.o"
+  "CMakeFiles/accel-pppd.dir/ppp/ccp_mppe.c.o"
+  "CMakeFiles/accel-pppd.dir/cli/std_cmd.c.o"
+  "CMakeFiles/accel-pppd.dir/cli/show_sessions.c.o"
+  "CMakeFiles/accel-pppd.dir/cli/telnet.c.o"
+  "CMakeFiles/accel-pppd.dir/cli/tcp.c.o"
+  "CMakeFiles/accel-pppd.dir/cli/cli.c.o"
+  "CMakeFiles/accel-pppd.dir/libnetlink/libnetlink.c.o"
+  "CMakeFiles/accel-pppd.dir/libnetlink/iputils.c.o"
+  "CMakeFiles/accel-pppd.dir/libnetlink/genl.c.o"
+  "CMakeFiles/accel-pppd.dir/pwdb.c.o"
+  "CMakeFiles/accel-pppd.dir/ipdb.c.o"
+  "CMakeFiles/accel-pppd.dir/iprange.c.o"
+  "CMakeFiles/accel-pppd.dir/utils.c.o"
+  "CMakeFiles/accel-pppd.dir/log.c.o"
+  "CMakeFiles/accel-pppd.dir/main.c.o"
+  "CMakeFiles/accel-pppd.dir/memdebug.c.o"
+  "accel-pppd.pdb"
+  "accel-pppd"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang C)
+  INCLUDE(CMakeFiles/accel-pppd.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)
